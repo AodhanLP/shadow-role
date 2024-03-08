@@ -1,0 +1,36 @@
+{
+    "branches": [
+        "main"
+    ],
+    "plugins": [
+        [
+        "@semantic-release/commit-analyzer",
+        {
+            "preset": "eslint"
+        }
+        ],
+        [
+        "@semantic-release/release-notes-generator",
+        {
+            "preset": "eslint"
+        }
+        ],
+        [
+        "@semantic-release/npm",
+        {
+            "npmPublish": false
+        }
+        ],
+        "@semantic-release/github",
+        [
+        "@semantic-release/git",
+        {
+            "assets": [
+            "package.json"
+            ],
+            "message": "Chore: Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+        ]
+    ],
+    "repositoryUrl": "git@github.com:AodhanLP/shadow-role.git"
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "echo": "echo \"Hello World!\" && exit 1",
     "gs": "git status",
-    "docker-clean": "docker system prune -f && docker image prune -f && docker volume prune -f && docker network prune -f"
+    "docker-clean": "docker system prune -f && docker image prune -f && docker volume prune -f && docker network prune -f",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -14,10 +15,17 @@
   },
   "author": "AodhanLP",
   "license": "ISC",
+  "private": true,
   "dependencies": {
     "express": "^4.18.3"
   },
   "devDependencies": {
-    "cypress": "^13.6.6"
+    "cypress": "^13.6.6",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "conventional-changelog-eslint": "^3.0.9",
+    "semantic-release": "19.0.3"
   }
 }
